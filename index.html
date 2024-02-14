@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: blueviolet;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <button onClick="displayDimensions()">Mostrar dimensões</button>
+    <p>Largura: <span id="widthDisplay"></span>px, Altura: <span id="heightDisplay"></span>px.</p>
+</body>
+<script>
+    function displayDimensions()
+    {
+        var bodyTag = document.querySelector("body");
+        var dimensions = { width: bodyTag.clientWidth, height: bodyTag.clientHeight};
+        document.querySelector("#widthDisplay").innerHTML = dimensions.width;
+        document.querySelector("#heightDisplay").innerHTML = dimensions.height;
+    }
+</script>
+</html>
